@@ -1,0 +1,101 @@
+Question 1 - Here is a sample line of code that can be executed in Python:
+
+print("Hello, World!")
+You can just as easily store a string as a variable and then print it to stdout:
+
+my_string = "Hello, World!"
+print(my_string)
+The above code will print Hello, World! on your screen. Try it yourself in the editor below!
+
+>SOLUTION - print("Hello, World!")
+
+Question 2 - Given an integer, , perform the following conditional actions:
+
+If  is odd, print Weird
+If  is even and in the inclusive range of  to , print Not Weird
+If  is even and in the inclusive range of  to , print Weird
+If  is even and greater than , print Not Weird
+
+>SOLUTION - import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    if(n%2!=0):
+        print("Weird")
+    elif(n%2==0 and n>=2 and n<=5):
+        print("Not Weird")
+    elif(n%2==0 and n>=6 and n<=20):
+        print("Weird")
+    else:
+        print("Not Weird")
+
+QUESTION 3 - The provided code stub reads two integers from STDIN,  and . Add code to print three lines where:
+
+The first line contains the sum of the two numbers.
+The second line contains the difference of the two numbers (first - second).
+The third line contains the product of the two numbers.
+
+>SOLUTION - if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    add=a+b
+    sub=a-b
+    mul=a*b
+    print(add)
+    print(sub)
+    print(mul)
+
+QUESTION 4 - The provided code stub reads two integers,  and , from STDIN.
+
+Add logic to print two lines. The first line should contain the result of integer division,  // . The second line should contain the result of float division,  / .
+
+No rounding or formatting is necessary.
+
+>SOLUTION - if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    divi=a//b
+    divf=a/b
+    print(divi)
+    print(divf)
+
+QUESTION 5 - The provided code stub reads and integer, n, from STDIN. For all non-negative integers i<n, print i2.
+
+Example
+n=3
+The list of non-negative integers that are less than  is . Print the square of each number on a separate line.
+
+0
+1
+4
+
+>SOLUTION - if __name__ == '__main__':
+    n = int(input())
+    mul=1
+    for i in range(0,n):
+        mul=i*i
+        print(mul)
+
+QUESTION 6 - Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.
+
+Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.
+
+>SOLUTION - def is_leap(year):
+    leap = False
+    
+    # Write your logic here
+    if(year%4==0 and (year%400==0 or year%100!=0)):
+        leap=True
+    else:
+        leap=False
+    
+    return leap
+
+year = int(input())
+print(is_leap(year))
